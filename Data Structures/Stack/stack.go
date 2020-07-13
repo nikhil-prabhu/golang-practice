@@ -1,4 +1,4 @@
-package stack
+package main
 
 type stack struct {
 	// Stack structure
