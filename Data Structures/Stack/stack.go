@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 type stack struct {
 	// Stack structure
 	stackData []interface{};
@@ -23,4 +27,12 @@ func (s *stack) pop() interface{} {
 func (s *stack) top() interface{} {
 	// Returns element at the top of the stack
 	return s.stackData[len(s.stackData) - 1];
+}
+
+func displayStackData(s stack) {
+	// Display stack elements from top to bottom
+	for i := len(s.stackData) - 1; i >= 0; i-- {
+		fmt.Printf("%v ", s.stackData[i]); // Display data
+		fmt.Println();
+	}
 }
