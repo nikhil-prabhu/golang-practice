@@ -29,7 +29,7 @@ func (s *stack) top() interface{} {
 	return s.stackData[len(s.stackData) - 1];
 }
 
-func displayStackData(s stack) {
+func (s stack) display() {
 	// Display stack elements from top to bottom
 	for i := len(s.stackData) - 1; i >= 0; i-- {
 		fmt.Printf("%v ", s.stackData[i]); // Display data
